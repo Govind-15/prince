@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="title" content="Hi Princess" />
+  <meta name="description" content="Tap the button to reveal a message 💖" />
   <title>Hi Princess</title>
   <style>
     body {
@@ -74,20 +76,18 @@
 </head>
 <body>
   <button onclick="showNote()">Hi Princess</button>
-  <div class="hint">Click on it</div>
+  <div class="hint">Click to reveal</div>
 
-  <div id="note">
-    <span id="secret"></span>
-  </div>
+  <div id="note"></div>
 
   <script>
     function showNote() {
       const note = document.getElementById("note");
-      const secret = document.getElementById("secret");
-
-      note.style.display = "block";
-      secret.innerText = `Good morning my prince, have a great day and enjoy and study well, time peh khana kha lena and I hope u ate your breakfast. 
+      const message = `Good morning my prince, have a great day and enjoy and study well, time peh khana kha lena and I hope u ate your breakfast.
 If ur still having cold, pls go visit a doctor samhji and don't forget to drink plenty of water and take rest.`;
+
+      note.innerText = message;
+      note.style.display = "block";
     }
   </script>
 </body>
